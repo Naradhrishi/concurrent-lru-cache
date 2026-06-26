@@ -50,7 +50,7 @@ public class LRUCache<K, V>{
         }
 
         // check if capacity is filled then remove tailNode and then add a new Node to the head.
-        if(list.size() == this.capacity){
+        if(list.size() >= this.capacity){
             // If the capacity of cache storage has been exhausted then remove the tailNode from doubly linked list and
             //  then remove that nodes key from the hashmap as well so that it doesn't refer to any node which does not exist and got deleted.
             Node<K, V>  tail = this.list.removeTail();
