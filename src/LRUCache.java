@@ -18,7 +18,7 @@ public class LRUCache<K, V>{
 
     }
 
-    public V get(K key){
+    public synchronized V get(K key){
         if(key == null){
             return null;
         }
@@ -36,7 +36,7 @@ public class LRUCache<K, V>{
     }
     
 
-    public void put(K key, V value){
+    public synchronized void put(K key, V value){
         if(key == null || value == null){
             return;
         }
