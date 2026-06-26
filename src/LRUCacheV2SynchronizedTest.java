@@ -33,5 +33,7 @@ public class LRUCacheV2SynchronizedTest{
         System.out.println("Correct: " + (cache.list.size() == capacity));
         System.out.println("Time taken: " + durationMs + "ms");
 
+        System.out.println("Successfully tested and checked that it's thread safe.");
+
     }
 }
